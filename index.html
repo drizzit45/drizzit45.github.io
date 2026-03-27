@@ -897,6 +897,15 @@
       display: block;
     }
 
+    .native-video {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      background: #000;
+      max-height: 420px;
+      object-fit: contain;
+    }
+
     .video-meta {
       padding: 20px 24px;
     }
@@ -1551,18 +1560,14 @@
 
         <div class="videos-grid">
           <div class="video-wrap reveal">
-            <div class="video-frame">
-              <iframe src="https://drive.google.com/file/d/15SCMSTIMN9vKMTzo02GZ1w2cQMNBhu-f/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+            <video class="native-video" src="images/VID-buddy.mp4" controls playsinline poster="images/gallery-buddy1_table.jpg"></video>
             <div class="video-meta">
               <h3>Grooming session — Buddy</h3>
               <p>Watch the process from start to finish and see the transformation.</p>
             </div>
           </div>
           <div class="video-wrap reveal">
-            <div class="video-frame">
-              <iframe src="https://drive.google.com/file/d/1lWokRuiluZL3lSdQXTQxh2Zz7DOHoaZa/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+            <video class="native-video" src="images/VID-cookie.mp4" controls playsinline poster="images/gallery-cookie_pool.jpg"></video>
             <div class="video-meta">
               <h3>Grooming session — Cookie</h3>
               <p>Another look at the care and calm we bring to every session.</p>
