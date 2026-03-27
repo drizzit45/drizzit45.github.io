@@ -873,6 +873,10 @@
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       margin-top: 48px;
+      /* Center the two portrait cards — don't stretch them wide */
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .video-wrap {
@@ -885,11 +889,10 @@
     }
 
     .native-video {
+      /* Force the container to be portrait shaped — video fills it 100% */
       width: 100%;
+      height: auto;
       display: block;
-      /* Let portrait video show at its natural aspect ratio — no black bars */
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
       background: #000;
     }
 
@@ -1375,8 +1378,8 @@
           <div class="feat-card tall reveal">
             <div class="feat-tag">All Breeds</div>
             <div class="feat-icon">🐾</div>
-            <h3>From Pomeranians to rabbits</h3>
-            <p>We handle dogs, cats, and small animals of all coat types and temperaments.</p>
+            <h3>All breeds, all sizes</h3>
+            <p>Dogs, cats, and small animals — whatever the breed, size, or coat, we've got them covered.</p>
             <div class="feat-photo-full">
               <img src="images/gallery-4-rabbit.jpg" alt="Groomed rabbit" />
             </div>
@@ -1405,16 +1408,16 @@
             <span class="service-emoji">🛁</span>
             <h3>Bath & Blow Dry</h3>
             <p>Full cleanse with a breed-appropriate shampoo, blow dry, and brush out for a fresh finish.</p>
-            <div class="service-price">From S$40–S$80</div>
+            <div class="service-price">From S$45–S$80</div>
           </div>
           <div class="service-card reveal">
-            <span class="service-emoji">✂️</span>
+            <span class="service-emoji">🪒</span>
             <h3>Basic Grooming</h3>
             <p>Bath, blow dry, nail trim, ear cleaning, and a tidy-up trim for regular upkeep.</p>
             <div class="service-price">From S$60–S$120</div>
           </div>
           <div class="service-card reveal">
-            <span class="service-emoji">🐕</span>
+            <span class="service-emoji">✂️</span>
             <h3>Full Grooming</h3>
             <p>Everything in basic, plus a full body style cut tailored to your pet's breed and your preference.</p>
             <div class="service-price">From S$80–S$250</div>
@@ -1423,7 +1426,7 @@
             <span class="service-emoji">✨</span>
             <h3>Add-ons</h3>
             <p>De-matting, de-shedding treatment, and teeth brushing available as individual add-ons.</p>
-            <div class="service-price">From S$15 each</div>
+            <div class="service-price">From S$10 each</div>
           </div>
         </div>
       </div>
@@ -1502,12 +1505,12 @@
             <h3>Bath & Blow Dry</h3>
             <p class="price-from">Wash, blow dry, brush out</p>
             <ul class="price-list">
-              <li><span>All sizes</span><span class="price-amount">S$40–S$80</span></li>
+              <li><span>All sizes</span><span class="price-amount">S$45–S$80</span></li>
             </ul>
           </div>
 
           <div class="price-card reveal">
-            <div class="price-card-icon">✂️</div>
+            <div class="price-card-icon">🪒</div>
             <h3>Basic Grooming</h3>
             <p class="price-from">Bath + trim + nail + ear cleaning</p>
             <ul class="price-list">
@@ -1518,7 +1521,7 @@
           </div>
 
           <div class="price-card featured reveal">
-            <div class="price-card-icon">🐕</div>
+            <div class="price-card-icon">✂️</div>
             <h3>Full Grooming</h3>
             <p class="price-from">Complete groom + full style cut</p>
             <ul class="price-list">
@@ -1531,7 +1534,7 @@
 
         <div class="pricing-note reveal" style="margin-top: 20px;">
           <div class="pricing-note-icon">➕</div>
-          <p><strong>Add-ons available:</strong> De-matting from S$15 · De-shedding from S$15 · Teeth brushing S$15 · Transport fee S$15–S$30 depending on location.</p>
+          <p><strong>Add-ons available:</strong> De-matting from S$10 · De-shedding from S$10 · Teeth brushing S$10 · Transport fee S$15–S$30 depending on location.</p>
         </div>
       </div>
     </section>
@@ -1547,16 +1550,16 @@
 
         <div class="videos-grid">
           <div class="video-wrap reveal">
-            <video class="native-video" src="images/VID-buddy.mp4" controls playsinline poster="images/gallery-buddy1_table.jpg"></video>
+            <video class="native-video" src="images/VID-buddy.mp4" controls playsinline></video>
             <div class="video-meta">
-              <h3>Grooming session — Buddy</h3>
+              <h3>Grooming a Cavapoo</h3>
               <p>Watch the process from start to finish and see the transformation.</p>
             </div>
           </div>
           <div class="video-wrap reveal">
-            <video class="native-video" src="images/VID-cookie.mp4" controls playsinline poster="images/gallery-cookie_pool.jpg"></video>
+            <video class="native-video" src="images/VID-cookie.mp4" controls playsinline></video>
             <div class="video-meta">
-              <h3>Grooming session — Cookie</h3>
+              <h3>Grooming a Pomi</h3>
               <p>Another look at the care and calm we bring to every session.</p>
             </div>
           </div>
