@@ -784,7 +784,11 @@
 
 
     .price-card-icon {
-      font-size: 2rem;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
       margin-bottom: 16px;
     }
 
@@ -1395,8 +1399,7 @@
     .pc-amber .price-desc { color: #854F0B; }
     .pc-amber .price-list li { color: #854F0B; border-color: rgba(186,117,23,0.15); }
     .pc-amber .price-amount { color: #633806; }
-    .pc-amber .price-divider { background: rgba(186,117,23,0.18); }
-    .pc-amber .price-card-icon { background: rgba(239,159,39,0.18); }
+    .pc-amber .price-divider { background: rgba(186,117,23,0.18); }    
 
     .pc-forest {
       background: var(--forest);
@@ -1406,8 +1409,7 @@
     .pc-forest .price-desc { color: rgba(255,255,255,0.65); }
     .pc-forest .price-list li { color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.10); }
     .pc-forest .price-amount { color: var(--gold-light); }
-    .pc-forest .price-divider { background: rgba(255,255,255,0.12); }
-    .pc-forest .price-card-icon { background: rgba(255,255,255,0.10); }
+    .pc-forest .price-divider { background: rgba(255,255,255,0.12); }    
 
     .price-popular-badge {
       display: inline-block;
