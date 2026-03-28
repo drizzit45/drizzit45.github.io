@@ -1219,7 +1219,7 @@
       .features-bento { grid-template-columns: 1fr; }
       .feat-card.wide { grid-column: span 1; flex-direction: column; }
       .feat-photo { width: 100%; height: 160px; }
-      .services-grid, .pricing-cards, .steps-row, .videos-grid { grid-template-columns: 1fr; }
+      .services-grid, .pricing-cards, .steps-row, .videos-grid, .compare-grid { grid-template-columns: 1fr; }
       .gallery-masonry { columns: 2; }
       .steps-row::before { display: none; }
       .cta-box { padding: 40px 28px; }
@@ -1233,6 +1233,109 @@
       .hero-ctas { flex-direction: column; }
       .hero-ctas .btn { width: 100%; }
     }
+
+    /* ─── HOME VS SALON COMPARISON ─── */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .compare-col {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(30,58,47,0.10);
+      background: var(--card-bg);
+    }
+
+    .compare-head {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .compare-salon .compare-head {
+      background: rgba(232,99,42,0.08);
+      border-bottom: 1px solid rgba(232,99,42,0.15);
+    }
+
+    .compare-patcare .compare-head {
+      background: rgba(30,58,47,0.07);
+      border-bottom: 1px solid rgba(30,58,47,0.12);
+    }
+
+    .compare-head-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .compare-salon .compare-head-icon { background: rgba(232,99,42,0.15); }
+    .compare-patcare .compare-head-icon { background: rgba(30,58,47,0.12); }
+
+    .compare-head-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .compare-salon .compare-head-title { color: #b84a1a; }
+    .compare-patcare .compare-head-title { color: var(--forest); }
+
+    .compare-rows { padding: 6px 0; }
+
+    .compare-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(30,58,47,0.06);
+    }
+
+    .compare-row:last-child { border-bottom: none; }
+
+    .compare-row-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+    .compare-row-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .compare-row-sub {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .compare-note {
+      margin-top: 20px;
+      padding: 18px 22px;
+      border-radius: var(--radius);
+      background: rgba(201,145,58,0.10);
+      border: 1px solid rgba(201,145,58,0.25);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .compare-note-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+
+    .compare-note p {
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .compare-note strong { color: var(--text); }
+
   </style>
 </head>
 <body>
@@ -1288,7 +1391,7 @@
             </div>
             <div class="trust-text">
               <strong>Dogs, cats & small animals welcome</strong>
-              Fluffy, scruffy, big or small — all loved
+              From Pomeranians to rabbits — all taken care of
             </div>
           </div>
         </div>
@@ -1394,6 +1497,113 @@
       </div>
     </section>
 
+
+    <!-- ═══ HOME VS SALON ═══ -->
+    <section style="background: var(--cream-2);">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-kicker">Why home grooming</div>
+          <h2>The real cost of going to a salon.</h2>
+          <p class="section-copy">Most pet owners don't realise what they're signing up for when they book a grooming salon — until it's too late.</p>
+        </div>
+
+        <div class="compare-grid reveal" style="margin-top: 40px;">
+          <div class="compare-col compare-salon">
+            <div class="compare-head">
+              <div class="compare-head-icon">😬</div>
+              <div class="compare-head-title">Grooming salon</div>
+            </div>
+            <div class="compare-rows">
+              <div class="compare-row">
+                <div class="compare-row-icon">🤧</div>
+                <div>
+                  <div class="compare-row-text">Risk of kennel cough</div>
+                  <div class="compare-row-sub">Spreads fast in enclosed spaces with many dogs in and out daily</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">🦟</div>
+                <div>
+                  <div class="compare-row-text">Fleas, ticks &amp; mites</div>
+                  <div class="compare-row-sub">High footfall of unknown dogs makes transmission a real risk</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">😰</div>
+                <div>
+                  <div class="compare-row-text">Stress &amp; anxiety</div>
+                  <div class="compare-row-sub">Unfamiliar place, strange dogs, loud environment, long waits</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">🚗</div>
+                <div>
+                  <div class="compare-row-text">Grab fare both ways</div>
+                  <div class="compare-row-sub">S$15–25 each way — even for short trips across the same neighbourhood</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">⏳</div>
+                <div>
+                  <div class="compare-row-text">Half your day gone</div>
+                  <div class="compare-row-sub">Drop off, wait around, pick up — hours of your time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare-col compare-patcare">
+            <div class="compare-head">
+              <div class="compare-head-icon">😊</div>
+              <div class="compare-head-title">PatCare at home</div>
+            </div>
+            <div class="compare-rows">
+              <div class="compare-row">
+                <div class="compare-row-icon">✅</div>
+                <div>
+                  <div class="compare-row-text">No kennel cough risk</div>
+                  <div class="compare-row-sub">Your pet never shares a space with other animals</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">✅</div>
+                <div>
+                  <div class="compare-row-text">Your pet grooms alone</div>
+                  <div class="compare-row-sub">No unknown animals in your space, no cross-contamination risk</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">✅</div>
+                <div>
+                  <div class="compare-row-text">Calm &amp; relaxed</div>
+                  <div class="compare-row-sub">Familiar surroundings make a huge difference for anxious pets</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">✅</div>
+                <div>
+                  <div class="compare-row-text">One flat transport fee</div>
+                  <div class="compare-row-sub">S$15–30 total — often less than a single Grab ride</div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-icon">✅</div>
+                <div>
+                  <div class="compare-row-text">You're home the whole time</div>
+                  <div class="compare-row-sub">No trips, no waiting, no rushing back for pickup</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-note reveal">
+          <div class="compare-note-icon">💡</div>
+          <p>A Grab ride can cost <strong>S$20 just to travel a few streets</strong> — and that's before the grooming even starts. Our transport fee covers the whole trip to your door, and your pet never has to leave home.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ SERVICES ═══ -->
     <section class="services-section">
       <div class="container">
@@ -1426,7 +1636,7 @@
             <span class="service-emoji">✨</span>
             <h3>Add-ons</h3>
             <p>De-matting, de-shedding treatment, and teeth brushing available as individual add-ons.</p>
-            <div class="service-price">From S$10</div>
+            <div class="service-price">From S$10 each</div>
           </div>
         </div>
       </div>
@@ -1534,7 +1744,7 @@
 
         <div class="pricing-note reveal" style="margin-top: 20px;">
           <div class="pricing-note-icon">➕</div>
-          <p><strong>Add-ons available:</strong> De-matting from S$15 · De-shedding from S$15 · Teeth brushing S$10 · Transport fee S$15–S$30 depending on location.</p>
+          <p><strong>Add-ons available:</strong> De-matting from S$10 · De-shedding from S$10 · Teeth brushing S$10 · Transport fee S$15–S$30 depending on location.</p>
         </div>
       </div>
     </section>
