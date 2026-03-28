@@ -782,21 +782,6 @@
       position: relative;
     }
 
-    .price-card.featured::before {
-      content: 'Popular';
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--orange);
-      color: white;
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 5px 14px;
-      border-radius: 100px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
 
     .price-card-icon {
       font-size: 2rem;
@@ -1390,6 +1375,64 @@
 
     .vet-note-sources a:hover { opacity: 0.75; }
 
+
+    /* ─── OPTION A PRICING CARDS ─── */
+    .pc-cream {
+      background: #faf7f2;
+      border-color: rgba(30,58,47,0.10);
+    }
+    .pc-cream h3 { color: var(--forest); }
+    .pc-cream .price-desc { color: var(--muted); }
+    .pc-cream .price-list li { color: var(--muted); border-color: rgba(30,58,47,0.08); }
+    .pc-cream .price-amount { color: var(--forest); }
+    .pc-cream .price-divider { background: rgba(30,58,47,0.10); }
+
+    .pc-amber {
+      background: #faeeda;
+      border-color: rgba(186,117,23,0.20);
+    }
+    .pc-amber h3 { color: #633806; }
+    .pc-amber .price-desc { color: #854F0B; }
+    .pc-amber .price-list li { color: #854F0B; border-color: rgba(186,117,23,0.15); }
+    .pc-amber .price-amount { color: #633806; }
+    .pc-amber .price-divider { background: rgba(186,117,23,0.18); }
+    .pc-amber .price-card-icon { background: rgba(239,159,39,0.18); }
+
+    .pc-forest {
+      background: var(--forest);
+      border-color: transparent;
+    }
+    .pc-forest h3 { color: var(--gold-light); }
+    .pc-forest .price-desc { color: rgba(255,255,255,0.65); }
+    .pc-forest .price-list li { color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.10); }
+    .pc-forest .price-amount { color: var(--gold-light); }
+    .pc-forest .price-divider { background: rgba(255,255,255,0.12); }
+    .pc-forest .price-card-icon { background: rgba(255,255,255,0.10); }
+
+    .price-popular-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .price-desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .price-divider {
+      height: 1px;
+      margin: 16px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -1673,44 +1716,6 @@
       </div>
     </section>
 
-    <!-- ═══ SERVICES ═══ -->
-    <section class="services-section">
-      <div class="container">
-        <div class="reveal">
-          <div class="section-kicker">Services</div>
-          <h2>Everything your pet needs, done right.</h2>
-          <p class="section-copy">A focused lineup of professional grooming services, delivered at your doorstep.</p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card reveal">
-            <span class="service-emoji">🛁</span>
-            <h3>Bath & Blow Dry</h3>
-            <p>Full cleanse with a breed-appropriate shampoo, blow dry, and brush out for a fresh finish.</p>
-            <div class="service-price">From S$45–S$80</div>
-          </div>
-          <div class="service-card reveal">
-            <span class="service-emoji">🪒</span>
-            <h3>Basic Grooming</h3>
-            <p>Bath, blow dry, nail trim, ear cleaning, and a tidy-up trim for regular upkeep.</p>
-            <div class="service-price">From S$60–S$120</div>
-          </div>
-          <div class="service-card reveal">
-            <span class="service-emoji">✂️</span>
-            <h3>Full Grooming</h3>
-            <p>Everything in basic, plus a full body style cut tailored to your pet's breed and your preference.</p>
-            <div class="service-price">From S$80–S$250</div>
-          </div>
-          <div class="service-card reveal">
-            <span class="service-emoji">✨</span>
-            <h3>Add-ons</h3>
-            <p>De-matting, de-shedding treatment, and teeth brushing available as individual add-ons.</p>
-            <div class="service-price">From S$10 each</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══ GALLERY ═══ -->
     <section class="gallery-section">
       <div class="container">
@@ -1769,29 +1774,31 @@
       </div>
     </section>
 
-    <!-- ═══ PRICING ═══ -->
+    <!-- ═══ SERVICES & PRICING ═══ -->
     <section>
       <div class="container">
         <div class="reveal">
-          <div class="section-kicker">Pricing</div>
-          <h2>Clear, honest pricing.</h2>
-          <p class="section-copy">Starting prices for our main services. Final pricing depends on breed, size, coat condition, and temperament. Message us for an exact quote.</p>
+          <div class="section-kicker">Services &amp; Pricing</div>
+          <h2>Everything your pet needs, <em>done right.</em></h2>
+          <p class="section-copy">Clear starting prices for every service. Final pricing depends on breed, size, coat condition, and temperament — message us for an exact quote.</p>
         </div>
 
-        <div class="pricing-cards">
-          <div class="price-card reveal">
+        <div class="pricing-cards" style="margin-top: 40px;">
+          <div class="price-card pc-cream reveal">
             <div class="price-card-icon">🛁</div>
-            <h3>Bath & Blow Dry</h3>
-            <p class="price-from">Wash, blow dry, brush out</p>
+            <h3>Bath &amp; Blow Dry</h3>
+            <p class="price-desc">Full cleanse with a breed-appropriate shampoo, blow dry, and brush out for a fresh finish.</p>
+            <div class="price-divider"></div>
             <ul class="price-list">
               <li><span>All sizes</span><span class="price-amount">S$45–S$80</span></li>
             </ul>
           </div>
 
-          <div class="price-card reveal">
+          <div class="price-card pc-amber reveal">
             <div class="price-card-icon">🪒</div>
             <h3>Basic Grooming</h3>
-            <p class="price-from">Bath + trim + nail + ear cleaning</p>
+            <p class="price-desc">Bath, blow dry, nail trim, ear cleaning, and a tidy-up trim for regular upkeep.</p>
+            <div class="price-divider"></div>
             <ul class="price-list">
               <li><span>Small</span><span class="price-amount">S$60–S$80</span></li>
               <li><span>Medium</span><span class="price-amount">S$80–S$100</span></li>
@@ -1799,10 +1806,12 @@
             </ul>
           </div>
 
-          <div class="price-card featured reveal">
+          <div class="price-card pc-forest reveal">
+            <div class="price-popular-badge">Most popular</div>
             <div class="price-card-icon">✂️</div>
             <h3>Full Grooming</h3>
-            <p class="price-from">Complete groom + full style cut</p>
+            <p class="price-desc">Everything in basic, plus a full body style cut tailored to your pet's breed and your preference.</p>
+            <div class="price-divider"></div>
             <ul class="price-list">
               <li><span>Small</span><span class="price-amount">S$80–S$115</span></li>
               <li><span>Medium</span><span class="price-amount">S$120–S$150</span></li>
@@ -1812,7 +1821,7 @@
         </div>
 
         <div class="pricing-note reveal" style="margin-top: 20px;">
-          <div class="pricing-note-icon">➕</div>
+          <div class="pricing-note-icon">✨</div>
           <p><strong>Add-ons available:</strong> De-matting from S$10 · De-shedding from S$10 · Teeth brushing S$10 · Transport fee S$15–S$30 depending on location.</p>
         </div>
       </div>
