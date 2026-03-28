@@ -1336,6 +1336,60 @@
 
     .compare-note strong { color: var(--text); }
 
+
+    /* ─── VET NOTE ─── */
+    .vet-note {
+      margin-top: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(30,58,47,0.15);
+      background: var(--forest);
+      overflow: hidden;
+    }
+
+    .vet-note-inner {
+      padding: 20px 24px;
+    }
+
+    .vet-note-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.12);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .vet-note-text {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.80);
+      margin: 0 0 14px;
+    }
+
+    .vet-note-sources {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .vet-note-sources a {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.15s;
+    }
+
+    .vet-note-sources a:hover { opacity: 0.75; }
+
   </style>
 </head>
 <body>
@@ -1600,6 +1654,19 @@
         <div class="compare-note reveal">
           <div class="compare-note-icon">💡</div>
           <p>A Grab ride can cost <strong>S$20 just to travel a few streets</strong> — and that's before the grooming even starts. Our transport fee covers the whole trip to your door, and your pet never has to leave home.</p>
+        </div>
+
+        <div class="vet-note reveal">
+          <div class="vet-note-inner">
+            <div class="vet-note-badge">🏥 Vet-backed</div>
+            <p class="vet-note-text">Mobile grooming is recommended by veterinarians as one of the best ways to reduce your pet's exposure to kennel cough and infectious diseases. Grooming salons are cited as high-risk environments — Cornell University's College of Veterinary Medicine specifically lists them alongside boarding kennels as places requiring the Bordetella vaccine.</p>
+            <div class="vet-note-sources">
+              <span>Sources:</span>
+              <a href="https://www.vet.cornell.edu" target="_blank" rel="noreferrer">Cornell University College of Veterinary Medicine</a>
+              <span>·</span>
+              <a href="https://wagwalking.com/wellness/can-dogs-get-kennel-cough-from-grooming" target="_blank" rel="noreferrer">Wag! — Kennel Cough &amp; Grooming</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
