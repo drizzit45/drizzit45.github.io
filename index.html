@@ -1416,6 +1416,9 @@
     .pc-forest .price-card-icon { background: rgba(255,255,255,0.10); }
 
     .price-popular-badge {
+      position: absolute;
+      top: 22px;
+      right: 22px;
       display: inline-block;
       background: var(--orange);
       color: white;
@@ -1425,7 +1428,8 @@
       border-radius: 100px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 0;
+      z-index: 1;
     }
 
     .price-desc {
