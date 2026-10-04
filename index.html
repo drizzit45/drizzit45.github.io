@@ -6,8 +6,8 @@
 
   <!-- ═══ PRIMARY SEO TAGS ═══ -->
   <title>PatCare Mobile Grooming SG | Home Dog & Pet Grooming Singapore</title>
-  <meta name="description" content="Professional mobile pet grooming delivered to your home across Singapore. Dogs, cats & small animals. Bath, haircut, nail trim & more. Book via WhatsApp: +65 8611 6065." />
-  <meta name="keywords" content="mobile dog grooming Singapore, home pet grooming Singapore, mobile grooming Singapore, dog grooming at home Singapore, mobile cat grooming Singapore, pet groomer Singapore, islandwide dog grooming, PatCare grooming, mobile grooming SG" />
+  <meta name="description" content="Professional mobile pet grooming delivered to your home across Singapore. Dogs & small animals. Bath, haircut, nail trim & more. Book via WhatsApp: +65 8611 6065." />
+  <meta name="keywords" content="mobile dog grooming Singapore, home pet grooming Singapore, mobile grooming Singapore, dog grooming at home Singapore, pet groomer Singapore, islandwide dog grooming, PatCare grooming, mobile grooming SG" />
   <meta name="author" content="PatCare Mobile Grooming SG" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.patcaregrooming.com" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.patcaregrooming.com" />
   <meta property="og:title" content="PatCare Mobile Grooming SG | Home Pet Grooming Singapore" />
-  <meta property="og:description" content="Professional mobile pet grooming at your doorstep. Dogs, cats & small animals. Islandwide Singapore. Book on WhatsApp: +65 8611 6065." />
+  <meta property="og:description" content="Professional mobile pet grooming at your doorstep. Dogs & small animals. Islandwide Singapore. Book on WhatsApp: +65 8611 6065." />
   <meta property="og:image" content="https://www.patcaregrooming.com/images/hero-bichon.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,7 +26,7 @@
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="PatCare Mobile Grooming SG | Home Pet Grooming Singapore" />
-  <meta name="twitter:description" content="Professional mobile pet grooming at your doorstep. Dogs, cats & small animals. Islandwide Singapore." />
+  <meta name="twitter:description" content="Professional mobile pet grooming at your doorstep. Dogs & small animals. Islandwide Singapore." />
   <meta name="twitter:image" content="https://www.patcaregrooming.com/images/hero-bichon.jpg" />
 
   <!-- ═══ LOCAL BUSINESS STRUCTURED DATA (JSON-LD) ═══ -->
@@ -35,7 +35,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "PatCare Mobile Grooming SG",
-    "description": "Professional mobile pet grooming service in Singapore. We come to your home to groom dogs, cats, and small animals islandwide. Services include bath and blow dry, basic grooming, full grooming, nail trimming, ear cleaning, de-matting and de-shedding.",
+    "description": "Professional mobile pet grooming service in Singapore. We come to your home to groom dogs and small animals islandwide. Services include bath and blow dry, basic grooming, full grooming, nail trimming, ear cleaning, de-matting and de-shedding.",
     "url": "https://www.patcaregrooming.com",
     "telephone": "+6586116065",
     "email": "kuchidude999@gmail.com",
@@ -144,10 +144,10 @@
       },
       {
         "@type": "Question",
-        "name": "Do you groom cats and rabbits?",
+        "name": "Do you groom cats?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! We groom dogs, cats, and small animals like rabbits. Message us with your pet details for a tailored quote."
+          "text": "We currently groom dogs and small animals like rabbits only, and no longer offer cat grooming. Message us with your pet details for a tailored quote."
         }
       },
       {
@@ -1354,6 +1354,7 @@
       .feat-card.tall { grid-row: span 1; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .pricing-cards { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
       .faq-layout { grid-template-columns: 1fr; gap: 40px; }
       .faq-sticky { position: static; }
       .cta-inner { grid-template-columns: 1fr; }
@@ -1366,7 +1367,7 @@
       .features-bento { grid-template-columns: 1fr; }
       .feat-card.wide { grid-column: span 1; flex-direction: column; }
       .feat-photo { width: 100%; height: 160px; }
-      .services-grid, .pricing-cards, .steps-row, .videos-grid, .compare-grid { grid-template-columns: 1fr; }
+      .services-grid, .pricing-cards, .steps-row, .videos-grid, .compare-grid, .reviews-grid { grid-template-columns: 1fr; }
       .gallery-masonry { columns: 2; }
       .steps-row::before { display: none; }
       .cta-box { padding: 40px 28px; }
@@ -1538,6 +1539,85 @@
     .vet-note-sources a:hover { opacity: 0.75; }
 
 
+    /* ─── REVIEWS ─── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(30,58,47,0.08);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift);
+    }
+
+    .review-stars { color: #f5a623; font-size: 1.1rem; letter-spacing: 2px; }
+
+    .review-text {
+      font-size: 0.93rem;
+      line-height: 1.75;
+      color: var(--muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .review-author {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .review-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--forest);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .review-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .reviews-summary {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .reviews-summary-stars { color: #f5a623; font-size: 1.5rem; letter-spacing: 2px; }
+
+    .reviews-summary-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--forest);
+    }
+
     /* ─── OPTION A PRICING CARDS ─── */
     .pc-cream {
       background: #faf7f2;
@@ -1650,12 +1730,11 @@
           <div class="hero-trust">
             <div class="trust-paws">
               <div class="trust-paw">🐶</div>
-              <div class="trust-paw">🐱</div>
               <div class="trust-paw">🐰</div>
               <div class="trust-paw">🐾</div>
             </div>
             <div class="trust-text">
-              <strong>Dogs, cats & small animals welcome</strong>
+              <strong>Dogs & small animals welcome</strong>
               Fluffy, scruffy, big or small — all welcome
             </div>
           </div>
@@ -1695,7 +1774,7 @@
         <span class="marquee-item"><span class="marquee-dot"></span> De-matting</span>
         <span class="marquee-item"><span class="marquee-dot"></span> De-shedding</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Teeth Brushing</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> Dogs & Cats</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Dogs & Small Pets</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Rabbits Welcome</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Book on WhatsApp</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Fast Replies</span>
@@ -1708,7 +1787,7 @@
         <span class="marquee-item"><span class="marquee-dot"></span> De-matting</span>
         <span class="marquee-item"><span class="marquee-dot"></span> De-shedding</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Teeth Brushing</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> Dogs & Cats</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Dogs & Small Pets</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Rabbits Welcome</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Book on WhatsApp</span>
         <span class="marquee-item"><span class="marquee-dot"></span> Fast Replies</span>
@@ -1747,7 +1826,7 @@
             <div class="feat-tag">All Breeds</div>
             <div class="feat-icon">🐾</div>
             <h3>All breeds, all sizes</h3>
-            <p>Dogs, cats, and small animals — whatever the breed, size, or coat, we've got them covered.</p>
+            <p>Dogs and small animals — whatever the breed, size, or coat, we've got them covered.</p>
             <div class="feat-photo-full">
               <img src="images/gallery-4-rabbit.jpg" alt="Groomed rabbit" />
             </div>
@@ -1982,6 +2061,83 @@
       </div>
     </section>
 
+    <!-- ═══ REVIEWS ═══ -->
+    <section>
+      <div class="container">
+        <div class="reveal">
+          <div class="section-kicker">Google Reviews</div>
+          <h2>What our clients <em>say.</em></h2>
+          <div class="reviews-summary">
+            <span class="reviews-summary-stars">★★★★★</span>
+            <span class="reviews-summary-label">5.0 on Google</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">We were looking for a home grooming service when we came across Pat's profile – and it honestly feels like we've discovered one of the most talented groomers in Singapore! Shiro had her first full grooming session with Pat today, and everything went so smoothly. Pat was extremely professional, knowledgeable, and reassuring throughout. She handled Shiro with such calmness, gentleness, and patience. This is definitely one of the best haircuts Shiro has had! We're beyond happy and wouldn't hesitate to recommend Pat to our friends! 🐶</p>
+            <div class="review-author">
+              <div class="review-avatar">C</div>
+              <div>
+                <div class="review-name">Charlyn</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Pat is easily our favourite pet groomer in Singapore. What truly sets her apart is the way she handles every pet — with genuine love, patience, and calm assurance. We trust her completely with Bobo's monthly grooming. Her grooming standards are also exceptional, especially for Bichon Frises — her teddy cuts are consistently well-shaped and beautifully finished, which is not easy to find. Highly recommended for anyone looking for a groomer who combines real skill with genuine care.</p>
+            <div class="review-author">
+              <div class="review-avatar">L</div>
+              <div>
+                <div class="review-name">Liane Anna Ong</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Pat is super friendly and very gentle with my dog — no stress at all during grooming 🫶 She also gives helpful advice on coat care and what style suits best. The grooming itself is amazing, Korean-style cut is on point ✂️✨ looks sooo neat and cute! Super hassle-free because she brings all her own equipment. We just needed to provide a space, bathroom, and a plug. Will definitely book her again, highly recommended! 💖</p>
+            <div class="review-author">
+              <div class="review-avatar">W</div>
+              <div>
+                <div class="review-name">Warisara Yimyaem</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Pat is the best! Have been sending 2 fur babies with her for the longest time. Pat is amazing and always lets us know if she notices anything different on their skin conditions.</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <div class="review-name">Jesslyn Chia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Engaged Pat for our dog’s first grooming experience and couldn’t have been happier with the service. Being at home made the experience stress-free and Pat was patient throughout the entire process. She took her time to make sure everyone was comfortable and never rushed anything. Not to mention, she’s extremely skilled and his haircut came out beautifully! We were so impressed with the final result and can’t wait to engage her again!</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div>
+                <div class="review-name">Amanda Isabelle</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;" class="reveal">
+          <a href="https://www.google.com/maps/search/patcare+mobile+grooming+sg" target="_blank" rel="noreferrer" class="btn btn-primary" style="display: inline-flex; background: var(--forest); color: white; padding: 16px 36px; border-radius: 100px; font-size: 1rem; font-weight: 700; box-shadow: 0 8px 24px rgba(30,58,47,0.28); text-decoration: none; align-items: center; gap: 10px;">
+            ⭐ See all reviews on Google
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ VIDEOS ═══ -->
     <section style="background: var(--cream-2);">
       <div class="container">
@@ -2078,11 +2234,11 @@
           </div>
           <div class="faq-item">
             <button class="faq-btn" type="button">
-              <span>Do you groom cats and rabbits too?</span>
+              <span>Do you groom cats?</span>
               <span class="faq-chevron">+</span>
             </button>
             <div class="faq-body">
-              <div class="faq-body-inner">Yes! We groom dogs, cats, and small animals like rabbits. Message us with your pet's details for a tailored quote.</div>
+              <div class="faq-body-inner">We currently groom dogs and small animals like rabbits only, and no longer offer cat grooming. Message us with your pet's details for a tailored quote.</div>
             </div>
           </div>
           <div class="faq-item">
